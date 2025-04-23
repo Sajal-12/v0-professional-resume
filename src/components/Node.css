@@ -1,0 +1,100 @@
+.node {
+  width: 25px;
+  height: 25px;
+  border: 1px solid #f5f5f5;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.node-start {
+  background-color: #800080;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>');
+  background-size: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.node-finish {
+  background-color: #ff0000;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="3"></circle></svg>');
+  background-size: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.node-wall {
+  background-color: #2d3436;
+  animation: wallAnimation 0.3s ease-out forwards;
+}
+
+.node-bomb {
+  background-color: #9b59b6;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>');
+  background-size: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.node-weight {
+  background-color: #f39c12;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path><line x1="16" y1="8" x2="2" y2="22"></line><line x1="17.5" y1="15" x2="9" y2="15"></line></svg>');
+  background-size: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.node-visited {
+  background-color: #00bcd4;
+  animation: visitedAnimation 1.5s ease-out forwards;
+}
+
+.node-shortest-path {
+  background-color: #ffeb3b;
+  animation: shortestPathAnimation 1.5s ease-out forwards;
+}
+
+@keyframes wallAnimation {
+  0% {
+    transform: scale(0.3);
+    background-color: #636e72;
+  }
+  50% {
+    transform: scale(1.2);
+    background-color: #2d3436;
+  }
+  100% {
+    transform: scale(1);
+    background-color: #2d3436;
+  }
+}
+
+@keyframes visitedAnimation {
+  0% {
+    transform: scale(0.3);
+    background-color: #00bcd4;
+    border-radius: 100%;
+  }
+  50% {
+    transform: scale(1.2);
+    background-color: #00bcd4;
+  }
+  100% {
+    transform: scale(1);
+    background-color: #00bcd4;
+  }
+}
+
+@keyframes shortestPathAnimation {
+  0% {
+    transform: scale(0.3);
+    background-color: #ffeb3b;
+  }
+  50% {
+    transform: scale(1.2);
+    background-color: #ffeb3b;
+  }
+  100% {
+    transform: scale(1);
+    background-color: #ffeb3b;
+  }
+}
